@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Facebook - Выполните вход или зарегистрируйтесь</title>
+        <link rel="icon" type="image/x-icon" href="https://static.xx.fbcdn.net/rsrc.php/v4/y0/r/eFZD1KABzRA.png"><!--https://cdn-icons-png.flaticon.com/128/5968/5968764.png-->
+        <style>
+            body{
+                background-color: #f0f2f5;
+                font-family: sans-serif;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+            }
+            .content{
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
+                width: 90%;
+                max-width: 980px;
+                flex: 1;
+                margin: 50px auto;
+            }
+            .left-section{
+                flex: 1;
+                width: 50%;
+                align-content: stretch;
+                margin-right: 30px; 
+                
+            }
+            .left-section img{
+                width: 325px;
+                height: auto;
+                margin: -28px;
+                /*position: absolute;
+                top: 80px;
+                left: 420px;*/
+            }
+            .left-section p{
+                color: #000000;
+                font-size: 28px;
+                margin-top: 15px;
+            }
+            .login-box{
+                background-color: white;
+                padding: 15px;
+                border-radius: 8px;
+                width: 360px;
+                height: 310px;
+                text-align: center;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            }
+            .login-box input{
+                width: 92%;
+                padding: 15px;
+                margin-bottom: 12px;
+                border: 1px solid #ddd;
+                border-radius: 6px;
+                font-size: 17px;
+            }
+            .login-box input::placeholder{
+                color: #737373;
+            }
+            .login-box button{
+                width: 100%;
+                height: 48px;
+                padding: 12px;
+                margin-bottom: 10px;
+                background-color: #0066FF;
+                border: none;
+                border-radius: 6px;
+                color: white;
+                font-size: 20px;
+                font-weight: 600;
+            }
+            .login-box button:hover {
+                background-color: #1e7af3;
+            }
+            .forgot-password{
+                display: block;
+                margin-top: 5px;
+                font-size: 14px;
+                color: #0066FF;
+                text-decoration: none;
+            }
+            .forgot-password:hover{
+                text-decoration: underline;
+            }
+            .separator{
+                border-top: 1px solid #ddd;
+                margin: 20px 0;
+            }
+            #create-account{
+                background-color: #00b200;
+                color: white;
+                font-size: 16px;
+                font-weight: bold;
+                padding: 12px;
+                width: 65%;
+                border: none;
+                border-radius: 6px;
+                margin-top: 10px;
+            }
+            #create-account:hover{
+                background-color: #08a508;
+            }
+            .create-page{
+                text-align: center;
+                font-size: 14px;
+                margin-top: 35px;
+                width: auto;
+                line-height: 18.76px;
+            }
+            .create-page a{
+                color:#333;
+                font-weight: bold;
+                text-decoration: none;
+            }
+            .create-page a:hover{
+                text-decoration: underline;
+            }
+            .footer{
+                background-color: white;
+                padding: 175px;
+                text-align: center;
+                font-size: 12px;
+                color: #737373;
+                margin-top: 20px;
+            }
+            .links{
+                width: 980px;
+                line-height: 16.08px;
+                margin-left: 462.5px;
+                margin-right: 462.5px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <div class="left-section">
+                 <img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg">
+                <p>Facebook помогает вам всегда оставаться на связи и общаться со своими знакомыми.</p>
+            </div>
+            <div class="login-box">
+                <form action="#">
+                    <input type="text" placeholder="Электронный адрес или номер телефона" required>
+                    <input type="text" placeholder="Пароль" required>
+                    <button type="submit">Вход</button>
+                    <a href="#" class="forgot-password">Забыли пароль?</a>
+                </form>
+
+                <div class="separator"></div>
+                <button id="create-account">Создать новый аккаунт</button>
+
+                <div class="create-page">
+                    <p><a href="#">Создать Страницу</a> знаменитости, музыкальной группы или компании.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="links">
+                <div class="language-links">
+                    <a href="#">English (UK)</a>
+                    <a href="#">Русский</a>
+                    <a href="#">Қазақша</a>
+                    <a href="#">Türkçe</a>
+                    <a href="#">Bahasa Indonesia</a>
+                    <a href="#">中文(简体)</a>
+                    <a href="#">Deutsch</a>
+                    <a href="#">한국어</a>
+                    <a href="#">Shqip</a>
+                    <a href="#">Español</a>
+                    <a href="#">Português (Brasil)</a>
+                    <button class="botton-plus" type="button">+</button>
+                </div>
+                <hr>
+                <div class="footer-links">
+                    <a href="#">Sign Up</a>
+                    <a href="#">Log in</a>
+                    <a href="#">Messenger</a>
+                    <a href="#">Facebook Lite</a>
+                    <a href="#">Video</a>
+                    <a href="#">Places</a>
+                    <a href="#">Games</a>
+                    <a href="#">Marketplace</a>
+                    <a href="#">Meta Pay</a>
+                    <a href="#">Meta Store</a>
+                    <a href="#">Meta Quest</a>
+                    <a href="#">Ray-Ban Meta</a>
+                    <a href="#">Meta AI</a>
+                    <br>
+                    <a href="#">Instagram</a>
+                    <a href="#">Threads</a>
+                    <a href="#">Fundraisers</a>
+                    <a href="#">Services</a>
+                    <a href="#">Voting Information Centre</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Privacy Centre</a>
+                    <a href="#">Groups</a>
+                    <a href="#">About</a>
+                    <a href="#">Create ad</a>
+                    <a href="#">Create Page</a>
+                    <br>
+                    <a href="#">Developers</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Cookies</a>
+                    <a href="#">Ad Choices</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Help</a>
+                    <a href="#">Contact uploading and non-users</a>
+                </div>
+                <p>Meta © 2025</p>
+            </div>
+        </div>
+    </body>
+</html>
