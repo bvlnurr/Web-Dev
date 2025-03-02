@@ -1,0 +1,19 @@
+.header-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 300px;
+}
+
+.header-nav div {
+    background-color: #56614e;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    border-radius: 80px;
+    padding-top: 20px;
+    color: #f4f4f4;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: italic;
+}
