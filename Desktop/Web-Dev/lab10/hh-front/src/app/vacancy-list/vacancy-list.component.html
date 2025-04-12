@@ -1,0 +1,22 @@
+<div class="vacancy-container">
+  <h2 class="vacancy-header">Available Positions ({{vacancies.length}})</h2>
+  
+  <div *ngFor="let vacancy of vacancies; let i = index" class="vacancy-item">
+    <div class="vacancy-number">{{i + 1}}.</div>
+    <div class="vacancy-content">
+      <div class="vacancy-main">
+        <h3 class="vacancy-title">{{vacancy.name}}</h3>
+        <div class="vacancy-salary">{{vacancy.salary | currency:'USD':'symbol':'1.0-0'}}/year</div>
+      </div>
+      <p class="vacancy-description">{{vacancy.description}}</p>
+      <div class="vacancy-footer">
+        <span class="company-name">{{getCompanyName(vacancy.company)}}</span>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="vacancies.length === 0" class="no-vacancies">
+    <i class="fas fa-search"></i>
+    <p>No vacancies found for this company</p>
+  </div>
+</div>

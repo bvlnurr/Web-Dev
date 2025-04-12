@@ -1,0 +1,20 @@
+.list-group-item {
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .list-group-item:hover {
+    background-color: #faf8f9;
+  }
+  
+  .list-group-item.active {
+    background-color: #69a2de;
+    color: rgb(6, 10, 141);
+  }
+
+.card-title{
+    font-size: 15px;
+}
+.card-text{
+    font-size: 13px;
+}

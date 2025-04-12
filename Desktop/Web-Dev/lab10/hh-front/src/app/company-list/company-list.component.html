@@ -1,0 +1,58 @@
+<div class="container mt-4">
+  <!-- Отладочная информация -->
+  <div *ngIf="error" class="alert alert-danger">
+    {{ error }}
+  </div>
+  
+  <div class="row">
+    <!-- Список компаний -->
+    <div class="col-md-6">
+      <h2>Companies</h2>
+      <div *ngIf="!companies.length" class="alert alert-warning">
+        No companies found
+      </div>
+      <ul class="list-group">
+        <li *ngFor="let company of companies" 
+            class="list-group-item" 
+            (click)="showVacancies(company.id)"
+            [class.active]="selectedCompanyId === company.id">
+          {{ company.name }} - {{ company.city }}
+        </li>
+      </ul>
+    </div>
+
+    <!-- Список вакансий -->
+    <div class="col-md-6">
+      <h3>Vacancies</h3>
+      
+      <div *ngIf="loading" class="text-center">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+
+      <div *ngIf="selectedCompanyId && !loading">
+        <div *ngIf="!vacancies.length" class="alert alert-info">
+          No vacancies found for selected company
+        </div>
+        
+          <ul><div *ngFor="let vacancy of vacancies" class="card mb-3"> 
+            <li>
+              <div class="card-body">
+            <h5 class="card-title">{{ vacancy.name }}</h5>
+            <p class="card-text">{{ vacancy.description }}</p>
+            <p class="card-text">
+              <strong>Salary:</strong> ${{ vacancy.salary | number }}
+            </p>
+          </div>
+        </li>
+        </div>
+        </ul>
+      </div>
+
+      <div *ngIf="!selectedCompanyId && !loading" class="alert alert-secondary">
+        Select a company to view vacancies
+      </div>
+    </div>
+  </div>
+</div>
